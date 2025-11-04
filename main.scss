@@ -3,17 +3,16 @@
 @use "sass:list";
 @use "sass:color";
 
-@mixin icon($s : 40px){
-	display: flex;
-	background: v.$text;
-	color: v.$textlight;
-	width: 3*v.$space;
-	aspect-ratio: 1 / 1;
-	border-radius: 50%;
-	justify-content: center;
-	align-items: center;
+@mixin icon($s: 40px) {
+    display: flex;
+    background: v.$text;
+    color: v.$textlight;
+    width: 3 * v.$space;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
 }
-
 
 html {
     background: v.$text; //on lit v.$main qui est dans le fichier "variables"
@@ -191,17 +190,15 @@ footer {
         gap: 6 * v.$space;
 
         #social {
-
-            ul{
-                i.fa-brand{
+            ul {
+                i.fa-brand {
                     @include icon(30px);
                 }
             }
-
         }
 
         article {
-            width: 35% ;
+            width: 35%;
             text-align: left;
 
             h1 {
