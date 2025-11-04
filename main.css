@@ -104,7 +104,7 @@ body > header {
   background-color: #111111;
 }
 body > header h1 {
-  color: #555555;
+  color: #ffffff;
 }
 body > header nav {
   display: flex;
@@ -127,4 +127,45 @@ body > header nav ul li a {
 }
 body > header nav ul li a:hover {
   color: #ce1b28;
+}
+
+#intro {
+  background: url("img/banner2.jpg") no-repeat 50% 50%/cover;
+  padding: 28vh 15%;
+  position: relative;
+}
+#intro h1 {
+  font-size: 4rem;
+  text-align: center;
+  color: #ffffff;
+}
+#intro p {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+main {
+  padding: 5% 15%;
+}
+main div {
+  display: grid;
+  grid-template-columns: repeat(3, 4fr);
+  gap: 20px;
+}
+main div article {
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  background: #ffffff;
+}
+main div article h1 {
+  font-size: 1.5rem;
+  margin: 10px;
+  color: #111111;
+}
+main div article p {
+  margin: 10px;
+  color: #555555;
 }/*# sourceMappingURL=main.css.map */

@@ -46,7 +46,7 @@ body {
         background-color: v.$secondary;
 
         h1 {
-            color: v.$textdark;
+            color: v.$textlight;
         }
 
         nav {
@@ -73,6 +73,51 @@ body {
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+#intro{
+    background: url('img/banner2.jpg') no-repeat 50% 50% / cover;
+	padding: 28vh 15%;
+	position: relative;
+    h1{
+        font-size: 4rem;
+        text-align: center;
+        color: v.$textlight;
+    }
+    p{
+        font-size: 1.5rem;
+        text-align: center;
+        color: v.$textlight;
+    }
+}
+
+main{
+    padding: 5% 15%;
+
+    div{
+        display: grid;;
+        grid-template-columns: repeat(3, 4fr);
+        gap: 2*v.$space;
+
+        article{
+            width: 100%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            background: v.$textlight;
+            
+            h1{
+                font-size: 1.5rem;
+                margin: v.$space;
+                color: v.$secondary;
+            }
+            
+            p{
+                margin: v.$space;
+                color: v.$textdark;
             }
         }
     }
