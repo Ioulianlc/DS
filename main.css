@@ -178,6 +178,14 @@ main div article img {
   max-width: 60%;
   height: auto;
 }
+main div article i,
+main div article svg {
+  display: block;
+  margin: 1rem auto;
+  color: #ce1b28;
+  font-size: 2.5rem;
+  fill: currentColor;
+}
 main div article h1 {
   font-size: 1rem;
   margin: 10px;
@@ -216,12 +224,22 @@ footer {
 footer div {
   display: flex;
   flex-direction: row;
-  padding: 25vh 15%;
+  padding: 25vh 5%;
   border-bottom: 1px solid white;
+  gap: 60px;
+}
+footer div #social ul i.fa-brand {
+  display: flex;
+  background: #ffffff;
+  color: #ffffff;
+  width: 30px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
 }
 footer div article {
-  flex: 1;
-  padding: 40px;
+  width: 35%;
   text-align: left;
 }
 footer div article h1 {

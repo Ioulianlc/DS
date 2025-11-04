@@ -3,6 +3,16 @@
 @use "sass:list";
 @use "sass:color";
 
+@mixin icon($s : 40px){
+	display: flex;
+	background: v.$text;
+	color: v.$textlight;
+	width: 3*v.$space;
+	aspect-ratio: 1 / 1;
+	border-radius: 50%;
+	justify-content: center;
+	align-items: center;
+}
 
 
 html {
@@ -69,83 +79,98 @@ body {
     }
 }
 
-#intro{
-    background: url('img/banner2.jpg') no-repeat 50% 50% / cover;
-	padding: 28vh 15%;
-	position: relative;
-    h1{
+#intro {
+    background: url("img/banner2.jpg") no-repeat 50% 50% / cover;
+    padding: 28vh 15%;
+    position: relative;
+    h1 {
         font-size: 4rem;
         text-align: center;
         color: v.$textlight;
     }
-    p{
+    p {
         font-size: 1.5rem;
         text-align: center;
         color: v.$textlight;
     }
 }
 
-main{
+main {
     padding: 5% 15%;
-    background: linear-gradient(rgba(v.$textlight, 0.95), rgba(v.$textlight, 0.95)), url('img/bg.jpg') no-repeat 50% 50% / cover;
+    background:
+        linear-gradient(rgba(v.$textlight, 0.95), rgba(v.$textlight, 0.95)),
+        url("img/bg.jpg") no-repeat 50% 50% / cover;
 
-    h1{
+    h1 {
         font-size: 2.5rem;
         color: v.$secondary;
         text-align: center;
     }
 
-    p{
+    p {
         font-size: 1.2rem;
         color: v.$textdark;
         text-align: center;
     }
 
-        div{
-            display: grid;;
-            grid-template-columns: repeat(3, 4fr);
-            gap: 2*v.$space;
+    div {
+        display: grid;
+        grid-template-columns: repeat(3, 4fr);
+        gap: 2 * v.$space;
 
-            article{
-                width: 100%;
-                box-shadow: 0 0 10px rgba(0,0,0,0.1);
-                border-radius: 5px;
-                overflow: hidden;
-                background: v.$textlight;
-                padding: 5*v.$space;
-                
-                    img{
-                        display: block;
-                        margin: 1rem auto;
-                        max-width: 60%;
-                        height: auto;
-                    }
-                h1{
-                    font-size: 1rem;
-                    margin: v.$space;
-                    color: v.$secondary;
-                }
+        article {
+            width: 100%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            background: v.$textlight;
+            padding: 5 * v.$space;
 
-                p{  
-                    font-size: 0.8rem;
-                    margin: v.$space;
-                    color: v.$textdark;
-                }
+            img {
+                display: block;
+                margin: 1rem auto;
+                max-width: 60%;
+                height: auto;
+            }
+
+            // Style pour les SVG et icônes
+            i,
+            svg {
+                display: block;
+                margin: 1rem auto;
+                color: v.$main; // Couleur rouge pour les icônes
+                font-size: 2.5rem; // Taille pour Font Awesome
+                fill: currentColor; // Pour SVG inline
+            }
+
+            h1 {
+                font-size: 1rem;
+                margin: v.$space;
+                color: v.$secondary;
+            }
+
+            p {
+                font-size: 0.8rem;
+                margin: v.$space;
+                color: v.$textdark;
             }
         }
+    }
 }
 
-article.cta{
-    background: linear-gradient(rgba(v.$main, 0.3), rgba(v.$main, 0.3)), url('img/cta01.jpg') no-repeat 50% 50% / cover;
-	padding: 34vh 15%;
-	position: relative;
-    h1{
+article.cta {
+    background:
+        linear-gradient(rgba(v.$main, 0.3), rgba(v.$main, 0.3)),
+        url("img/cta01.jpg") no-repeat 50% 50% / cover;
+    padding: 34vh 15%;
+    position: relative;
+    h1 {
         font-size: 2.5rem;
         font-weight: 400;
         text-align: center;
         color: v.$textlight;
     }
-    p{
+    p {
         font-size: 1.5rem;
         font-weight: 400;
         text-align: center;
@@ -153,31 +178,40 @@ article.cta{
     }
 }
 
-footer{
+footer {
     background-color: v.$secondary;
     color: v.$textlight;
     text-align: center;
     padding: 2 * v.$space;
-    div{
+    div {
         display: flex;
         flex-direction: row;
-        padding: 25vh 15%;
+        padding: 25vh 5%;
         border-bottom: 1px solid color.adjust(v.$textlight);
+        gap: 6 * v.$space;
 
-        article{
-            flex: 1;
-            padding: 4*v.$space;
+        #social {
+
+            ul{
+                i.fa-brand{
+                    @include icon(30px);
+                }
+            }
+
+        }
+
+        article {
+            width: 35% ;
             text-align: left;
 
-            h1{
+            h1 {
                 margin-bottom: v.$space;
             }
 
-            p{
+            p {
                 font-size: 0.9rem;
                 line-height: 1.5;
             }
-
         }
     }
 }
