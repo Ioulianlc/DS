@@ -74,7 +74,7 @@ figure img {
 html {
   background: #ffffff;
   color: #111111;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: poppins, sans-serif;
   font-size: px;
 }
 html a {
@@ -147,6 +147,17 @@ body > header nav ul li a:hover {
 
 main {
   padding: 5% 15%;
+  background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url("img/bg.jpg") no-repeat 50% 50%/cover;
+}
+main h1 {
+  font-size: 2.5rem;
+  color: #111111;
+  text-align: center;
+}
+main p {
+  font-size: 1.2rem;
+  color: #555555;
+  text-align: center;
 }
 main div {
   display: grid;
@@ -159,13 +170,64 @@ main div article {
   border-radius: 5px;
   overflow: hidden;
   background: #ffffff;
+  padding: 50px;
+}
+main div article img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 60%;
+  height: auto;
 }
 main div article h1 {
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin: 10px;
   color: #111111;
 }
 main div article p {
+  font-size: 0.8rem;
   margin: 10px;
   color: #555555;
+}
+
+article.cta {
+  background: linear-gradient(rgba(206, 27, 40, 0.3), rgba(206, 27, 40, 0.3)), url("img/cta01.jpg") no-repeat 50% 50%/cover;
+  padding: 34vh 15%;
+  position: relative;
+}
+article.cta h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-align: center;
+  color: #ffffff;
+}
+article.cta p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  color: #ffffff;
+}
+
+footer {
+  background-color: #111111;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+footer div {
+  display: flex;
+  flex-direction: row;
+  padding: 25vh 15%;
+  border-bottom: 1px solid white;
+}
+footer div article {
+  flex: 1;
+  padding: 40px;
+  text-align: left;
+}
+footer div article h1 {
+  margin-bottom: 10px;
+}
+footer div article p {
+  font-size: 0.9rem;
+  line-height: 1.5;
 }/*# sourceMappingURL=main.css.map */
