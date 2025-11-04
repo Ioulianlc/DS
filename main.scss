@@ -1,0 +1,79 @@
+@use "reset";
+@use "variable" as v;
+@use "sass:list";
+@use "sass:color";
+
+@mixin icon($s: 40px) {
+    display: flex;
+    background: v.$text;
+    color: v.$main;
+    width: $s;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+html {
+    background: v.$text; //on lit v.$main qui est dans le fichier "variables"
+    color: v.$secondary;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: px;
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    p {
+        margin-bottom: 2rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+body {
+    line-height: 2;
+    > header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 50;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 2 * v.$space;
+        text-transform: uppercase;
+        background-color: v.$secondary;
+
+        h1 {
+            color: v.$textdark;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                gap: v.$space;
+                list-style: none;
+
+                li {
+                    margin: 0;
+                    padding: 0;
+
+                    a {
+                        color: v.$textdark;
+                        transition: color 0.3s ease;
+
+                        &:hover {
+                            color: v.$main;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
